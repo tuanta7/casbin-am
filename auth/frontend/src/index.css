@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0000;
+  --secondary: #999;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+a.active {
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: oklch(var(--p)) !important;
+}
+
+td {
+  white-space: nowrap;
+}
+
+input.no-focus:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 1px solid transparent !important;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.table :where(thead, tbody) :where(tr:first-child:last-child) {
+  border-bottom-width: 0px !important;
+}
